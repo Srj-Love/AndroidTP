@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                      android:paddingTop="24dp">
+
+            <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Open Bottom Sheet"
+                    android:padding="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorAmber_900"/>
+
+            <Button
+                    android:id="@+id/button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="8dp"
+                    android:text="Close Bottom Sheet"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorRed_900"/>
+
+            <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="8dp"
+                    android:text="Make Bottom Sheet Peek"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorGreen_A400"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/very_long_text"
+                    android:padding="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimaryDark"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/very_long_text"
+                    android:padding="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorRed_900"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/very_long_text"
+                    android:padding="16dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPurple_A400"
+                    android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:layout_height="350dp"
+                                           android:clipToPadding="true"
+                                           android:id="@+id/bottom_sheet"
+                                           android:background="@color/colorGreen_900"
+                                           app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/very_long_text"
+                android:padding="16dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
