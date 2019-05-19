@@ -1,4 +1,4 @@
-package com.example.androidtp.Utils;
+package com.example.androidtp.utils;
 
 import android.content.Context;
 import android.util.AttributeSet;

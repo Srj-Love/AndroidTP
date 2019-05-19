@@ -43,4 +43,18 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+    <Button
+            android:text="Google Drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_google_drive" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_extract_color"/>
+    <Button
+            android:text="Linkage RCV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_linkage_rcv" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_google_drive"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

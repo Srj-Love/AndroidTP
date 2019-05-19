@@ -10,9 +10,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import com.example.androidtp.activity.AnimDrawableActivity
-import com.example.androidtp.activity.BottomSheetActivity
-import com.example.androidtp.activity.ExtractColorActivity
+import com.example.androidtp.activity.*
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar!!.hide()
+//        supportActionBar!!.hide()
 
         btn_anim_drawable.setOnClickListener {
             startActivity(
@@ -56,6 +54,24 @@ class MainActivity : AppCompatActivity() {
                 Intent(
                     this@MainActivity,
                     ExtractColorActivity::class.java
+                )
+            )
+        }
+
+        // Access Google Drive
+        btn_google_drive.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    GoogleDriveActivity::class.java
+                )
+            )
+        }
+        btn_linkage_rcv.setOnClickListener {
+            startActivity(
+                Intent(
+                    this@MainActivity,
+                    LinkageRCV::class.java
                 )
             )
         }
