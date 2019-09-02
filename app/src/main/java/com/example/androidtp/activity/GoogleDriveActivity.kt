@@ -17,6 +17,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.Scope
+import com.google.android.gms.tasks.Tasks
 import com.google.api.services.drive.DriveScopes
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
@@ -28,6 +29,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.File
+import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -95,12 +97,9 @@ class GoogleDriveActivity : AppCompatActivity() {
         find_local.setOnClickListener { findLocal() }
         create_local.setOnClickListener { createLocal() }
 
-
         signIn()
         initFile()
-
     }
-
 
     // user sign in
     private fun signIn() {
